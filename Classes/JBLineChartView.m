@@ -864,7 +864,7 @@ static UIColor *kJBLineChartViewDefaultDotSelectionColor = nil;
 {
     if ([self hasMinimumValue])
     {
-        return fminf(self.cachedMinHeight, [super minimumValue]);
+        return [super minimumValue];
     }
     return self.cachedMinHeight;
 }
@@ -873,7 +873,7 @@ static UIColor *kJBLineChartViewDefaultDotSelectionColor = nil;
 {
     if ([self hasMaximumValue])
     {
-        return fmaxf(self.cachedMaxHeight, [super maximumValue]);
+        return [super maximumValue];
     }
     return self.cachedMaxHeight;
 }
